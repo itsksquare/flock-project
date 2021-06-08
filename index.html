@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flock Project</title>
+    <style>
+      .guess,
+      .form {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="guess">
+      <h1>Guess the Number</h1>
+      <button onclick="guessNumber()">Guess</button>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="form">
+      <h1>Basic Form</h1>
+      <form>
+        First Name: <input type="text" /> Last Name: <input type="text" />
+        <br />
+        UserName: <input type="text" /> Email: <input type="email" />
+        <br />
+        Password: <input type="password" />
+        <br />
+        <br />
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script>
+      function guessNumber() {
+        const random = Math.floor(Math.random() * 10) + 1;
+        let num = parseInt(prompt("Guess a number from 1 to 10"));
+        while (num != random) {
+          num = parseInt(prompt("Incorrect Guess! Want to try again?"));
+        }
+        if (num == random) {
+          alert("That is the right number!!");
+        }
+      }
+    </script>
+  </body>
+</html>
